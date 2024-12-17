@@ -1,11 +1,23 @@
 function getComputerChoice() {
-    let choice = Math.ceil(Math.random() * 3);
-    const choice_map = new Map();
-    choice_map.set(1, "rock");
-    choice_map.set(2, "paper");
-    choice_map.set(3, "scissors");
+    let computerChoice = Math.ceil(Math.random() * 3);
+    const computerChoiceMap = new Map();
+    computerChoiceMap.set(1, "rock");
+    computerChoiceMap.set(2, "paper");
+    computerChoiceMap.set(3, "scissors");
 
-    return choice_map.get(choice);
+    return computerChoiceMap.get(computerChoice);
 }
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let humanChoice = prompt("Pick rock, paper or scissors: ");
+    humanChoice = humanChoice.toLowerCase();
+    if (humanChoice != "rock" || humanChoice != "paper" || humanChoice != "scissors") {
+        return "Invalid choice";
+    }
+
+    return humanChoice;
+}
+console.log("Computer choice: " + getComputerChoice());
+console.log("Computer choice: " + getHumanChoice());
+
+
