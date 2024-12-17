@@ -10,14 +10,13 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let humanChoice = prompt("Pick rock, paper or scissors: ");
-    humanChoice = humanChoice.toLowerCase();
-    if (humanChoice != "rock" || humanChoice != "paper" || humanChoice != "scissors") {
+    if (humanChoice.toLowerCase() === "rock" || humanChoice.toLowerCase() === "paper" || humanChoice.toLowerCase() === "scissors") {
+        return humanChoice;
+    } else {
         return "Invalid choice";
     }
-
-    return humanChoice;
 }
 console.log("Computer choice: " + getComputerChoice());
-console.log("Computer choice: " + getHumanChoice());
+console.log("Human choice: " + getHumanChoice().toLowerCase());
 
 
