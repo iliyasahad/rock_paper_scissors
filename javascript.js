@@ -24,8 +24,10 @@ function playGame() {
 
     if (humanScore == 5 && computerScore < 5) {
         window.alert("You win!");
-    } else {
+    } else if (humanScore < 5 && computerScore == 5) {
         window.alert("You lose!");
+    } else if (humanScore < 5 && computerScore < 5) {
+        playRound();
     }
 
     return 0;
