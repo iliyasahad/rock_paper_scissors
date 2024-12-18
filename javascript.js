@@ -1,11 +1,9 @@
-let humanScore, computerScore = 0;
-
-
 function playRound(humanChoice, computerChoice) {
-    getHumanChoice();
-    getComputerChoice();
-
+    
 }
+
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice(); 
 
 function getComputerChoice() {
     let computerChoice = Math.ceil(Math.random() * 3);
