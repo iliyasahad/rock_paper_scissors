@@ -1,6 +1,37 @@
-function playRound(humanChoice, computerChoice) {
-    
+
+function playGame() {
+    let counter, humanScore, computerScore = 0;
+
+    function playRound(humanChoice, computerChoice) {
+        if ((humanChoice === "rock" && computerChoice === "rock") || 
+        (humanChoice === "paper" && computerChoice === "paper") || 
+        (humanChoice === "scissors" && computerChoice === "scissors")) {
+            return "Tie";
+        } else if (humanChoice === "rock" && computerChoice === "scissors") {
+            humanScore++;
+        } else if (humanChoice === "rock" && computerChoice === "paper") {
+            computerScore++;
+        } else if (humanChoice === "paper" && computerChoice === "rock") {
+            humanScore++;
+        } else if (humanChoice === "paper" && computerChoice === "scissors") {
+            computerScore++;
+        } else if (humanChoice === "scissors" && computerChoice === "rock") {
+            computerChoice++;
+        } else if (humanChoice === "scissors" && computerChoice === "paper") {
+            humanScore++;
+        }
+    }
+
+    if (humanScore == 5 && computerScore < 5) {
+        window.alert("You win!");
+    } else {
+        window.alert("You lose!");
+    }
+
+    return 0;
 }
+
+
 
 let humanSelection = getHumanChoice();
 let computerSelection = getComputerChoice(); 
