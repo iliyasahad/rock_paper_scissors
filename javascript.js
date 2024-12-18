@@ -16,7 +16,10 @@ function getHumanChoice() {
         return "Invalid choice";
     }
 }
-console.log("Computer choice: " + getComputerChoice());
+
 console.log("Human choice: " + getHumanChoice().toLowerCase());
+console.log("Computer choice: " + getComputerChoice());
+
+let humanScore, computerScore = 0;
 
 
