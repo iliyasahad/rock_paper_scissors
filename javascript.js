@@ -61,8 +61,3 @@ function getHumanChoice() {
 
 
 
-console.log("Human choice: " + getHumanChoice().toLowerCase());
-console.log("Computer choice: " + getComputerChoice());
-
-
-
