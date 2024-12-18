@@ -33,29 +33,26 @@ function playGame() {
         (humanChoice === "scissors" && computerChoice === "scissors")) {
             return "Tie";
         } else if (humanChoice === "rock" && computerChoice === "scissors") {
-            humanScore++;
+            return humanScore++;
         } else if (humanChoice === "rock" && computerChoice === "paper") {
-            computerScore++;
+            return computerScore++;
         } else if (humanChoice === "paper" && computerChoice === "rock") {
-            humanScore++;
+            return humanScore++;
         } else if (humanChoice === "paper" && computerChoice === "scissors") {
-            computerScore++;
+            return computerScore++;
         } else if (humanChoice === "scissors" && computerChoice === "rock") {
             computerChoice++;
         } else if (humanChoice === "scissors" && computerChoice === "paper") {
-            humanScore++;
+            return humanScore++;
         }
+        return 1;
     }
 
     playRound(humanSelection, computerSelection);
-
-    if (humanScore == 5 && computerScore < 5) {
-        window.alert("You win!");
-    } else if (humanScore < 5 && computerScore == 5) {
-        window.alert("You lose!");
-    } else if (humanScore < 5 && computerScore < 5) {
-        playRound(humanSelection, computerSelection);
-    }
+    playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
 
     return 0;
 }
