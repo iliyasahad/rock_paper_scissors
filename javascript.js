@@ -1,6 +1,10 @@
 
+playGame();
+
 function playGame() {
     let counter, humanScore, computerScore = 0;
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice(); 
 
     function playRound(humanChoice, computerChoice) {
         if ((humanChoice === "rock" && computerChoice === "rock") || 
@@ -22,21 +26,20 @@ function playGame() {
         }
     }
 
+    playRound(humanSelection, computerSelection);
+
     if (humanScore == 5 && computerScore < 5) {
         window.alert("You win!");
     } else if (humanScore < 5 && computerScore == 5) {
         window.alert("You lose!");
     } else if (humanScore < 5 && computerScore < 5) {
-        playRound();
+        playRound(humanSelection, computerSelection);
     }
 
     return 0;
 }
 
 
-
-let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice(); 
 
 function getComputerChoice() {
     let computerChoice = Math.ceil(Math.random() * 3);
