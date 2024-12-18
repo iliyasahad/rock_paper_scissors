@@ -1,3 +1,5 @@
+let counter, humanScore, computerScore = 0;
+
 function getComputerChoice() {
     let computerChoice = Math.ceil(Math.random() * 3);
 
@@ -22,9 +24,6 @@ function getHumanChoice() {
 
 
 function playGame() {
-    let counter = 0;
-    let humanScore = 0;
-    let computerScore = 0;
     let humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice(); 
 
