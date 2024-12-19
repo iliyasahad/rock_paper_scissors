@@ -1,7 +1,9 @@
-let humanScore, computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 console.log("Player score: " + humanScore);
 console.log("Computer score: " + computerScore);
 
+playGame();
 
 function playGame() {
     for (let i = 1; i <= 5; i++) {
@@ -9,7 +11,16 @@ function playGame() {
         console.log("Round: " + i + "\nPlayer score: " + humanScore + "\nComputer score: " + computerScore);
     }
 
+    let result = "";
+    if (humanScore === computerScore) {
+        result = "The game is a tie!";
+    } else if (humanScore >= computerScore) {
+        result = "You win the game!";
+    } else {
+        result = "You lost the game!";
+    }
 
+    return result;
 }
 
 function playRound(humanChoice, computerChoice) {
