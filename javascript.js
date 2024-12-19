@@ -1,8 +1,16 @@
 let humanScore, computerScore = 0;
-let round = 1;
-console.log("Round: " + round);
 console.log("Player score: " + humanScore);
 console.log("Computer score: " + computerScore);
+
+
+function playGame() {
+    for (let i = 1; i <= 5; i++) {
+        playRound(getHumanChoice(), getComputerChoice());
+        console.log("Round: " + i + "\nPlayer score: " + humanScore + "\nComputer score: " + computerScore);
+    }
+
+
+}
 
 function playRound(humanChoice, computerChoice) {
     console.log("Player choice: " + humanChoice);
@@ -29,7 +37,6 @@ function playRound(humanChoice, computerChoice) {
         console.log("You win! Scissors beats paper.");
         humanChoice++;
     }
-
 }
 
 
