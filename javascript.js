@@ -1,4 +1,9 @@
-let counter, humanScore, computerScore = 0;
+let humanScore, computerScore = 0;
+let round = 1;
+console.log("Round: " + round);
+console.log("Player score: " + humanScore);
+console.log("Computer score: " + computerScore);
+
 
 function getComputerChoice() {
     let computerChoice = Math.ceil(Math.random() * 3);
