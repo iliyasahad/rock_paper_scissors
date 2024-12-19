@@ -4,6 +4,34 @@ console.log("Round: " + round);
 console.log("Player score: " + humanScore);
 console.log("Computer score: " + computerScore);
 
+function playRound(humanChoice, computerChoice) {
+    console.log("Player choice: " + humanChoice);
+    console.log("Computer choice: " + computerChoice);
+
+    if (humanChoice === computerChoice) {
+        console.log("Tie");
+    } else if (humanChoice === "rock" && computerChoice === "paper") {
+        console.log("You lose! Paper beats rock.");
+        computerChoice++;
+    } else if (humanChoice === "rock" && computerChoice === "scissors"){
+        console.log("You win! Rock beats scissors.");
+        humanChoice++;
+    } else if (humanChoice === "paper" && computerChoice === "rock"){
+        console.log("You win! Paper beats rock.");
+        humanChoice++;
+    } else if (humanChoice === "paper" && computerChoice === "scissors"){
+        console.log("You lose! Scissors beats paper.");
+        computerChoice++;
+    } else if (humanChoice === "scissors" && computerChoice === "rock"){
+        console.log("You lose! Rock beats scissors.");
+        computerChoice++;
+    } else if (humanChoice === "scissors" && computerChoice === "paper"){
+        console.log("You win! Scissors beats paper.");
+        humanChoice++;
+    }
+
+}
+
 
 function getComputerChoice() {
     let computerChoice = Math.ceil(Math.random() * 3);
